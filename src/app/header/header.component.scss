@@ -7,11 +7,72 @@
     background-color: #000; /* Preto do Rick & Morty */
     z-index: 1000; /* Garante que ele fique EM CIMA dos cards */
     box-sizing: border-box; //coloca no calculo de altura e largura o tamanho da navbar
-    
+
     /* Flexbox para alinhar o logo na esquerda e botões na direita */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+
+    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
   }
-  
+
+  .logo img {
+    transition: all 0.4s ease
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    background-color: transparent; //cor do elemento nav
+    border: 2px solid #333; //adicionar borda
+    border-radius: 50px; //arredondar bordas
+    padding: 4px; // espaço entre borda e botão
+    width: fit-content; //ajustar largura ao conteúdo
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px; //espaçamento entre ícone e texto
+    text-decoration: none; //remover sublinhado
+    padding: 3px 15px; //espaçamento interno Altura e largura
+    border-radius: 40px;
+    font-size: 0,9rem; //rem para responsividade
+    font-weight: 600; //negrito
+    color: #888;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #333; //cor de fundo ao passar o mouse
+    color: #fff; //cor do texto ao passar o mouse
+  }
+  .btn.active{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); //sombra para destacar o botão ativo
+
+    .icon{
+      fill: black;
+    }
+
+    .bagde{
+      color: black;
+      border: 1px solid black;
+    }
+  }
+  .bagde {
+  background-color: white; /* Bolinha branca */
+  color: black;            /* Número preto */
+  font-size: 0.75rem;
+  font-weight: bold;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;      /* Deixa redonda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
