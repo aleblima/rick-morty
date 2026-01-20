@@ -9,4 +9,17 @@
       [character]="character"
     ></app-card>
   </div>
+  <div class="pagination">
+    <button
+      (click)="changePage(-1)"
+      [disabled]="currentPage === 1"
+      class="page-btn"
+    >
+      <i class="bi bi-arrow-left"></i> Anterior
+    </button>
+    <span class="page-number"> Página {{ currentPage }}</span>
+    <button (click)="changePage(+1)" class="page-btn">
+      <i class="bi bi-arrow-right"></i> Próxima
+    </button>
+  </div>
 </div>
