@@ -18,3 +18,49 @@ h2 {
   font-family: "Creepster", cursive;
   letter-spacing: 2px; /* Dica: Fontes estilizadas ficam melhores com espaçamento */
 }
+
+/* Estilo do Card "Vazio" */
+.empty-state {
+  background-color: #000000; /* Fundo preto puro ou bem escuro */
+  border: 1px solid #333; /* Borda sutil */
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto; /* Centraliza na tela */
+
+  /* Título */
+  h2 {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  /* Texto descritivo */
+  p {
+    color: #888; /* Cinza claro */
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  /* Botão de Voltar (Opcional) */
+  .back-btn {
+    background-color: white;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: #f0f0f0;
+    }
+  }
+}

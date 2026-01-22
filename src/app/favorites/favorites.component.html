@@ -1,11 +1,14 @@
 <div class="container">
   <h1 class="title">FAVORITOS</h1>
 
-  <div class="grid">
+  <div class="grid" *ngIf="favoritesList.length > 0">
     <app-card *ngFor="let item of favoritesList" [character]="item"> </app-card>
   </div>
 
-  <p *ngIf="favoritesList.length === 0" style="color: white">
-    Você ainda não tem favoritos.
-  </p>
+  <div class="empty-state" *ngIf="favoritesList.length === 0">
+    <h2>Parece que você ainda não tem favoritos</h2>
+    <p>Volte à página inicial e escolha os melhores para você.</p>
+    <button routerLink="/" class="back-btn">Voltar ao início</button>
+  </div>
+  <p *ngIf="favoritesList.length === 0" style="color: white"></p>
 </div>

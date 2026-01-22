@@ -20,8 +20,13 @@ export class RickMortyService {
     }
   }
 
-  getCharacters(page: number = 1): Observable<iCharResponse> {
-    return this.http.get<iCharResponse>(`${this.apiURL}/?page=${page}`);
+  getCharacters(
+    page: number = 1,
+    name: string = '',
+  ): Observable<iCharResponse> {
+    return this.http.get<iCharResponse>(
+      `${this.apiURL}/?page=${page}&name=${name}`,
+    );
   }
 
   getFavorites() {
